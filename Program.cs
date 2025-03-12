@@ -44,15 +44,36 @@ public class LinkedList{
             current = current.link;
         }
     }
+    public int Count(){
+        int c = 0;
+        Node current = head.link;
+        while(current!=null){
+            c++;
+            current = current.link;
+        }
+        return c;
+    }
+    public int Sum(){
+        int s = 0;
+        Node current = head.link;
+        while(current!=null){
+            s += int.Parse(current.element.ToString());
+            current = current.link;
+        }
+        return s;
+    }
 }
 public class Program
 {
     public static void Main(string[] args)
     {
+        Console.Clear();
         LinkedList list = new LinkedList();
         list.Insert("1", "Header");
         list.Insert("2", "1");
         list.Insert("3", "2");
         list.Print();
+        Console.WriteLine("Count: " + list.Count());
+        Console.WriteLine("Sum: " + list.Sum());
     }
 }
