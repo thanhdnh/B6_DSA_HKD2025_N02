@@ -62,7 +62,9 @@ public class LinkedList{
         }
         return s;
     }
+    //Thêm hàm swap và sort.
 }
+//Cài đặt DoubleLinkedList và bổ sung Count, Sum, Swap, Sort.
 public class Program
 {
     public static void Main(string[] args)
